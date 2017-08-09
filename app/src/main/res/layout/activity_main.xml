@@ -4,27 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="br.ufrn.eaj.tads.exemplolinear.MainActivity">
+    android:orientation="horizonal"
+    tools:context="br.ufrn.eaj.tads.exemplolinear.MainActivity" >
+
+    <!--
+
+    Note que quando o layout é horizonal a LARGURA (width) dever ser mantida em 0dp para
+    que a largura possa ser estimada através do valor do peso.
+
+    -->
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="7"
         android:id="@+id/btn1"
-        android:visibility="gone"
+        android:layout_gravity="left"
+        android:text="Botão 1"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:id="@+id/btn2"
+        android:layout_gravity="center"
+        android:text="Botão 2"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btn3"
+        android:layout_gravity="right|bottom"
+        android:text="Botão 3"/>
+
+    <!--
+
+    PARA LAYOUT VERTICAL
+
+    Note que quando o layout é vertical a ALTURA (height) dever ser mantida em 0dp para
+    que a altura possa ser estimada através do valor do peso.
+
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:id="@+id/btn1"
+         android:layout_gravity="left"
         android:text="Botão 1"/>
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
         android:id="@+id/btn2"
-        android:visibility="invisible"
+        android:layout_gravity="center"
         android:text="Botão 2"/>
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:id="@+id/btn3"
+        android:layout_gravity="right"
         android:text="Botão 3"/>
 
+        -->
 
 </LinearLayout>
